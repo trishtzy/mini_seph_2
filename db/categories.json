@@ -1,0 +1,145 @@
+{
+  "MAKEUP": {
+    "FACE": [
+      "Face Palettes & Sets",
+      "Setting & Finishing Spray",
+      "Foundation",
+      "Concealer & Corrector",
+      "Face Primer",
+      "Bronzer",
+      "Blush",
+      "BB & CC Cream",
+      "Tinted Moisturiser",
+      "Highlighter & Illuminator",
+      "Contour",
+      "Powder"
+    ],
+    "EYES": [
+      "Eyeshadow",
+      "Eye Palettes & Sets",
+      "False Eyelashes",
+      "Mascara",
+      "Eyebrows",
+      "Eye Primer",
+      "Under Eye Concealer",
+      "Eyeliner"
+    ],
+    "LIPS": [
+      "Lip Palettes & Sets",
+      "Lip Balm",
+      "Lip Primer",
+      "Lip Gloss",
+      "Lip Stain & Tint",
+      "Lipstick",
+      "Lip Plumper",
+      "Lip Liner"
+    ],
+    "NAILS": [
+      "Nail Treatments",
+      "Nail Sets",
+      "Nail Art",
+      "Nail Polish",
+      "Base & Top Coat",
+      "Nail Polish Remover"
+    ],
+    "MAKEUP REMOVER": [
+      "Eyes & Lips",
+      "Face"
+    ]
+  },
+  "SKINCARE": {
+    "MASKS & TREATMENTS": [
+      "Serum & Booster",
+      "Face Oil",
+      "Lip Care",
+      "Mask",
+      "Peel",
+      "Eye Care"
+    ],
+    "MOISTURISER": [
+      "Night Cream",
+      "Day Moisturiser",
+      "Facial Mist",
+      "Neck & Decollete Cream"
+    ],
+    "CLEANSER & EXFOLIATOR": [
+      "Facial Cleanser",
+      "Blotting Paper",
+      "Scrub & Exfoliator"
+    ],
+    "SUN CARE": [
+      "After Sun Care",
+      "Self Tanner",
+      "Face Sunscreen"
+    ],
+    "TONER":[],
+    "SKINCARE SETS": []
+  },
+  "HAIR": {
+    "STYLING": [
+      "Pomade, Wax & Gel",
+      "Heat Protection",
+      "Hair Cream",
+      "Hair Colour",
+      "Mousse",
+      "Hair Spray",
+      "Volumiser",
+      "Texturiser"
+    ],
+    "SHAMPOO & CONDITIONER": [
+      "Leave-In Conditioner",
+      "Shampoo",
+      "Dry Shampoo",
+      "Conditioner"
+    ],
+    "TREATMENT": [
+      "Hair Serum",
+      "Hair Masks",
+      "Hair Oil",
+      "Scalp Treatment"
+    ],
+    "HAIR CARE SETS":[]
+  },
+  "TOOLS": {
+    "BRUSHES": [
+      "Face Brushes",
+      "Eye Brushes",
+      "Brush Sets",
+      "Lip Brushes",
+      "Brush Cleaners",
+      "Multipurpose Brushes"
+    ],
+    "MANICURE & PEDICURE": [
+      "Pedicure Tools",
+      "Scissors",
+      "Manicure & Pedicure Sets",
+      "Nail Files & Buffers",
+      "Nail Clippers"
+    ],
+    "MAKEUP ACCESSORIES": [
+      "Tweezers & Brows",
+      "Mirrors",
+      "Eyelash Curlers",
+      "Pencil Sharpeners"
+    ],
+
+    "BAGS & ORGANISERS": [
+      "Makeup Bags",
+      "Palette Organisers",
+      "Professional Cases",
+      "Containers"
+    ],
+    "BEAUTY DEVICES": [
+      "Skincare",
+      "Makeup",
+      "Dental Care"
+    ],
+    "SPONGES & APPLICATORS": [
+      "Powder Puffs",
+      "Sponges"
+    ],
+    "HAIR TOOLS": [
+      "Brushes & Combs"
+    ]
+  }
+}
