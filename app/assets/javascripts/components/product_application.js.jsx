@@ -9,8 +9,8 @@ var ProductApplication = React.createClass({
     var self = this;
     $.ajax({
       url: '/api/products',
-      success: function(data) {
-        self.setState({ products: data });
+      success: function(response) {
+        self.setState({ products: response.data });
       },
       error: function(xhr, status, error) {
         alert('API error: ', error);

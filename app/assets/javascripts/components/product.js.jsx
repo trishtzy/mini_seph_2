@@ -11,12 +11,11 @@ var Product = React.createClass({
     var product = this.props.product;
     return (
       <div className="col-md-4">
-        <h2>{product.name}</h2>
-        <p>{product.description}</p>
-        <p>SGD {product.price}</p>
-        <i className="small-text">{product.brand_id},
-                                  {product.category_id},
-                                  {product.subcategory_id}</i>
+        <h2>{product.attributes.name}</h2>
+        <p>{product.attributes.brand.name}</p>
+        <p>{product.attributes.description}</p>
+        <p>SGD ${product.attributes.price}</p>
+        <i className="small-text">{product.attributes.category.name} > {product.attributes.subcategory.name}</i>
       </div>
     )
   }

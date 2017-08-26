@@ -6,7 +6,9 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
 
   config.react.variant = :development
-  
+
+  ActiveModelSerializers.config.adapter = :json_api # Default: `:attributes`
+
   config.cache_classes = false
 
   # Do not eager load code on boot.

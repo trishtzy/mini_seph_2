@@ -34,10 +34,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Additional Gems
-gem 'react-rails'
-gem 'bootstrap-sass'
-gem 'jquery-rails'
-gem 'ffaker'
+gem 'react-rails', '~> 2.2.1'
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'jquery-rails', '~> 4.3.1'
+gem 'ffaker', '~> 2.6.0'
+gem 'active_model_serializers', '~> 0.10.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
