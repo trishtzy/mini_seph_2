@@ -18,7 +18,7 @@ var SearchForm = React.createClass({
       <input onChange={this.handleSearch}
         type="text"
         className="form-control"
-        placeholder="Search"
+        placeholder="Search product name or description"
         ref="query" />
     )
   }
