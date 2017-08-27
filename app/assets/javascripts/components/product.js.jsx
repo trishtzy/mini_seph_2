@@ -14,7 +14,7 @@ var Product = React.createClass({
     var child_2_id = product.attributes.subsubcategory.id;
     return (
       <div className="col-md-4">
-        <h3>{name}</h3>
+        <h4>{name}</h4>
         <p>by <a href="#" onClick={this.props.handleClickBrand}>{brand}</a></p>
         <p>{desc}</p>
         <p>SGD ${price}</p>
