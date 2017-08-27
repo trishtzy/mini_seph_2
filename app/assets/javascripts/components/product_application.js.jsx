@@ -43,7 +43,7 @@ var ProductApplication = React.createClass({
             <SearchSubCategory selectSubCat={this.reloadProducts} />
           </div>
           <div className="col-md-2">
-            <SearchSubCategory selectSubCat={this.reloadProducts} />
+            <SearchSubSubCategory selectSubSubCat={this.reloadProducts} />
           </div>
         </div>
         <div className="row">
@@ -51,7 +51,8 @@ var ProductApplication = React.createClass({
             <ProductGrid products={this.state.products}
                          handleClickBrand={this.reloadProducts}
                          handleClickParent={this.reloadProducts}
-                         handleClickChild1={this.reloadProducts}/>
+                         handleClickChild1={this.reloadProducts}
+                         handleClickChild2={this.reloadProducts}/>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170826065734) do
+ActiveRecord::Schema.define(version: 20170827063147) do
 
   create_table "brands", force: :cascade do |t|
     t.string "name"
@@ -31,11 +31,13 @@ ActiveRecord::Schema.define(version: 20170826065734) do
     t.integer "brand_id"
     t.integer "category_id"
     t.integer "subcategory_id"
+    t.integer "subsubcategory_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["subcategory_id"], name: "index_products_on_subcategory_id"
+    t.index ["subsubcategory_id"], name: "index_products_on_subsubcategory_id"
   end
 
   create_table "subcategories", force: :cascade do |t|
@@ -44,6 +46,16 @@ ActiveRecord::Schema.define(version: 20170826065734) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_subcategories_on_category_id"
+  end
+
+  create_table "subsubcategories", force: :cascade do |t|
+    t.string "name"
+    t.integer "category_id"
+    t.integer "subcategory_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_subsubcategories_on_category_id"
+    t.index ["subcategory_id"], name: "index_subsubcategories_on_subcategory_id"
   end
 
 end

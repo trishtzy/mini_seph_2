@@ -15,6 +15,11 @@ def seed_categories_and_children(filepath)
     obj[key].each do |subkey, subarray|
       sc = Subcategory.create(:name => subkey,
                               :category_id => c.id)
+      subarray.each do |ssub|
+        Subsubcategory.create(:name => ssub,
+                              :category_id => c.id,
+                              :subcategory_id => sc.id)
+      end
     end
   end
 end
@@ -34,6 +39,11 @@ def generate_subcategory_id
   return rand(1..max)
 end
 
+def generate_subsubcategory_id
+  max = Subsubcategory.count
+  return rand(1..max)
+end
+
 def seed_products(x)
   x.times do
     p = Product.new
@@ -43,6 +53,7 @@ def seed_products(x)
     p.brand_id = generate_brand_id
     p.category_id = generate_category_id
     p.subcategory_id = generate_subcategory_id
+    p.subsubcategory_id = generate_subsubcategory_id
     p.save
   end
 end

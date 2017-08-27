@@ -44,6 +44,21 @@ var ProductGrid = React.createClass({
       }
     });
   },
+  handleClickChild2: function(product) {
+    var subsubcat_id = product.attributes.subsubcategory.id
+    console.log('clicked: '+ subsubcat_id);
+    var self = this;
+    $.ajax({
+      url: '/api/products/get_products_by_subsubcat',
+      data: {id: subsubcat_id},
+      success: function(response) {
+        self.props.handleClickChild2(response.data);
+      },
+      error: function(xhr, status, error) {
+        alert('API error: ', error);
+      }
+    });
+  },
   render: function() {
     var products = [];
     this.props.products.forEach(function(product) {
@@ -51,7 +66,8 @@ var ProductGrid = React.createClass({
                           key={'product' + product.id}
                           handleClickBrand={this.handleClickBrand.bind(this, product)}
                           handleClickParent={this.handleClickParent.bind(this, product)}
-                          handleClickChild1={this.handleClickChild1.bind(this, product)}/>);
+                          handleClickChild1={this.handleClickChild1.bind(this, product)}
+                          handleClickChild2={this.handleClickChild2.bind(this, product)}/>);
     }.bind(this));
     return(
       <div className="row">

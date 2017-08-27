@@ -35,6 +35,14 @@ module Api
       render json: products
     end
 
+    def select_subsubcategory
+      query_sub = params[:query_sub]
+      subsubcategory = Subsubcategory.find_by(:name => query_sub)
+      products = Product.where("subsubcategory_id = ?", subsubcategory.id)
+
+      render json: products
+    end
+
     def get_products_by_brand
       id = params[:id]
       products = Product.where(:brand_id => id)
@@ -52,6 +60,13 @@ module Api
     def get_products_by_subcat
       id = params[:id]
       products = Product.where(:subcategory_id => id)
+
+      render json: products
+    end
+
+    def get_products_by_subsubcat
+      id = params[:id]
+      products = Product.where(:subsubcategory_id => id)
 
       render json: products
     end
