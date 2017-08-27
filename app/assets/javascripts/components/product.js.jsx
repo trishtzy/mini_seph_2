@@ -16,7 +16,7 @@ var Product = React.createClass({
         <p>by <a href="#" onClick={this.props.handleClickBrand}>{brand}</a></p>
         <p>{desc}</p>
         <p>SGD ${price}</p>
-        <i className="small-text"><a href="#" onClick={this.props.handleClickParent}>{parent}</a> > <a href="#" onClick={this.props.handleClickChild}>{child_1}</a></i>
+        <i className="small-text"><a href="#" onClick={this.props.handleClickParent}>{parent}</a> > <a href="#" onClick={this.props.handleClickChild1}>{child_1}</a></i>
       </div>
     )
   }

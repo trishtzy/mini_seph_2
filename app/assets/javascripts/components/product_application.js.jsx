@@ -19,55 +19,39 @@ var ProductApplication = React.createClass({
       }
     });
   },
-  handleSearch: function(products) {
-    this.setState({products: products});
-  },
-  selectBrand: function(products) {
-    this.setState({products: products});
-  },
-  selectCat: function(products) {
-    this.setState({products: products});
-  },
-  selectSubCat: function(products) {
-    this.setState({products: products});
-  },
-  handleClickBrand: function(products) {
-    console.log('clicking from app');
-    this.setState({products: products});
-  },
-  handleClickParent: function(products) {
-    console.log('cat clicking from app');
+  reloadProducts: function(products) {
     this.setState({products: products});
   },
   render: function() {
     return(
       <div className="container">
         <div className="intro">
-          <h1>Mini_Seph</h1>
+          <h1><a href="/">Mini_Seph</a></h1>
           <p>by Tricia Tan</p>
         </div>
         <div className="row">
           <div className="col-md-4">
-            <SearchForm handleSearch={this.handleSearch}/>
+            <SearchForm handleSearch={this.reloadProducts}/>
           </div>
           <div className="col-md-2">
-            <SearchBrand selectBrand={this.selectBrand} />
+            <SearchBrand selectBrand={this.reloadProducts} />
           </div>
           <div className="col-md-2">
-            <SearchCategory selectCat={this.selectCat} />
+            <SearchCategory selectCat={this.reloadProducts} />
           </div>
           <div className="col-md-2">
-            <SearchSubCategory selectSubCat={this.selectSubCat} />
+            <SearchSubCategory selectSubCat={this.reloadProducts} />
           </div>
           <div className="col-md-2">
-            <SearchSubCategory selectSubCat={this.selectSubCat} />
+            <SearchSubCategory selectSubCat={this.reloadProducts} />
           </div>
         </div>
         <div className="row">
           <div className="col-md-12">
             <ProductGrid products={this.state.products}
-                         handleClickBrand={this.handleClickBrand}
-                         handleClickParent={this.handleClickParent}/>
+                         handleClickBrand={this.reloadProducts}
+                         handleClickParent={this.reloadProducts}
+                         handleClickChild1={this.reloadProducts}/>
           </div>
         </div>
       </div>

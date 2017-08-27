@@ -29,13 +29,29 @@ var ProductGrid = React.createClass({
       }
     });
   },
+  handleClickChild1: function(product) {
+    var subcat_id = product.attributes.subcategory.id
+    console.log('clicked: '+ subcat_id);
+    var self = this;
+    $.ajax({
+      url: '/api/products/get_products_by_subcat',
+      data: {id: subcat_id},
+      success: function(response) {
+        self.props.handleClickChild1(response.data);
+      },
+      error: function(xhr, status, error) {
+        alert('API error: ', error);
+      }
+    });
+  },
   render: function() {
     var products = [];
     this.props.products.forEach(function(product) {
       products.push(<Product product={product}
                           key={'product' + product.id}
                           handleClickBrand={this.handleClickBrand.bind(this, product)}
-                          handleClickParent={this.handleClickParent.bind(this, product)}/>);
+                          handleClickParent={this.handleClickParent.bind(this, product)}
+                          handleClickChild1={this.handleClickChild1.bind(this, product)}/>);
     }.bind(this));
     return(
       <div className="row">
