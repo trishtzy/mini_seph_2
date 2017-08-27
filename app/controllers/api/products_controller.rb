@@ -11,7 +11,7 @@ module Api
       render json: products
     end
 
-    def select_brand
+    def search_by_brand
       query_brand = params[:query_brand]
       brand = Brand.find_by(:name => query_brand)
       products = Product.where("brand_id = ?", brand.id)
@@ -19,7 +19,7 @@ module Api
       render json: products
     end
 
-    def select_category
+    def search_by_category
       query_cat = params[:query_cat]
       category = Category.find_by(:name => query_cat)
       products = Product.where("category_id = ?", category.id)
@@ -27,7 +27,7 @@ module Api
       render json: products
     end
 
-    def select_subcategory
+    def search_by_subcategory
       query_sub = params[:query_sub]
       subcategory = Subcategory.find_by(:name => query_sub)
       products = Product.where("subcategory_id = ?", subcategory.id)
@@ -35,7 +35,7 @@ module Api
       render json: products
     end
 
-    def select_subsubcategory
+    def search_by_subsubcategory
       query_sub = params[:query_sub]
       subsubcategory = Subsubcategory.find_by(:name => query_sub)
       products = Product.where("subsubcategory_id = ?", subsubcategory.id)

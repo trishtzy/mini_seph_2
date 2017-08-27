@@ -4,7 +4,7 @@ var SearchSubCategory = React.createClass({
     if (query_sub) {
       var self = this;
       $.ajax({
-        url: '/api/products/select_subcategory',
+        url: '/api/products/search_by_subcategory',
         data: {query_sub: query_sub},
         success: function(response) {
           self.props.selectSubCat(response.data);

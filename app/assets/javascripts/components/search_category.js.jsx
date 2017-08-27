@@ -4,7 +4,7 @@ var SearchCategory = React.createClass({
     if (query_cat) {
       var self = this;
       $.ajax({
-        url: '/api/products/select_category',
+        url: '/api/products/search_by_category',
         data: {query_cat: query_cat},
         success: function(response) {
           self.props.selectCat(response.data);

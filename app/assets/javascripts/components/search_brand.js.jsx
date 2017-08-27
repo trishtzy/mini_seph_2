@@ -4,7 +4,7 @@ var SearchBrand = React.createClass({
     if (query_brand) {
       var self = this;
       $.ajax({
-        url: '/api/products/select_brand',
+        url: '/api/products/search_by_brand',
         data: {query_brand: query_brand},
         success: function(response) {
           self.props.selectBrand(response.data);
