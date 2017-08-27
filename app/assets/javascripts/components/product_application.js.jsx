@@ -1,6 +1,8 @@
 var ProductApplication = React.createClass({
   getInitialState: function() {
-    return { products: [] };
+    return {
+      products: []
+    };
   },
   componentDidMount: function() {
     this.getProductData();
@@ -13,11 +15,28 @@ var ProductApplication = React.createClass({
         self.setState({ products: response.data });
       },
       error: function(xhr, status, error) {
-        alert('API error: ', error);
+        alert('1. API error: ', error);
       }
     });
   },
   handleSearch: function(products) {
+    this.setState({products: products});
+  },
+  selectBrand: function(products) {
+    this.setState({products: products});
+  },
+  selectCat: function(products) {
+    this.setState({products: products});
+  },
+  selectSubCat: function(products) {
+    this.setState({products: products});
+  },
+  handleClickBrand: function(products) {
+    console.log('clicking from app');
+    this.setState({products: products});
+  },
+  handleClickParent: function(products) {
+    console.log('cat clicking from app');
     this.setState({products: products});
   },
   render: function() {
@@ -31,10 +50,24 @@ var ProductApplication = React.createClass({
           <div className="col-md-4">
             <SearchForm handleSearch={this.handleSearch}/>
           </div>
+          <div className="col-md-2">
+            <SearchBrand selectBrand={this.selectBrand} />
+          </div>
+          <div className="col-md-2">
+            <SearchCategory selectCat={this.selectCat} />
+          </div>
+          <div className="col-md-2">
+            <SearchSubCategory selectSubCat={this.selectSubCat} />
+          </div>
+          <div className="col-md-2">
+            <SearchSubCategory selectSubCat={this.selectSubCat} />
+          </div>
         </div>
         <div className="row">
           <div className="col-md-12">
-            <ProductGrid products={this.state.products} />
+            <ProductGrid products={this.state.products}
+                         handleClickBrand={this.handleClickBrand}
+                         handleClickParent={this.handleClickParent}/>
           </div>
         </div>
       </div>

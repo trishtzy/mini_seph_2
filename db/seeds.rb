@@ -1,6 +1,7 @@
 def seed_brand(filepath)
   File.open(filepath, "r") do |f|
     f.each_line do |name|
+      name = name.delete("\n")
       Brand.create(:name => name)
     end
   end
