@@ -1,13 +1,10 @@
 # README
 
-* Ruby version
-ruby 2.4.1
+* Ruby version 2.4.1
 
-* Rails version
-Rails 5.1.3
+* Rails version 5.1.3
 
-* React version
-React 5.3.0 
+* React version 5.3.0 
 (Scripts are written without ES6, though otherwise still works)
 
 * How to view application
